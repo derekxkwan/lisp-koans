@@ -14,9 +14,9 @@
 
 (define-test test-double-quoted-strings-are-strings
     (let ((my-string "do or do not"))
-      (true-or-false? ___ (typep my-string 'string))
+      (true-or-false? t (typep my-string 'string))
       "strings are the same thing as vectors of characters"
-      (true-or-false? ___ (typep my-string 'array))
+      (true-or-false? 'vector (typep my-string 'array))
       (assert-equal (aref "meat" 2) (aref "fiesta" 5))
       "strings are not integers :p"
       (true-or-false? ___ (typep my-string 'integer))))
