@@ -50,8 +50,27 @@
 ; Your goal is to write the score method.
 
 (defun score (dice)
-  ; You need to write this method
-)
+ ;; You need to write this method
+  (let ((result 0)
+	(1-count (count 1 dice))
+	(2-count (count 2 dice))
+	(3-count (count 3 dice))
+	(4-count (count 4 dice))
+	(5-count (count 5 dice))
+	(6-count (count 6 dice)))
+    (
+     (cond ((>= 1-count 3)
+	    ((3- 1-count) (1000+ result)))
+	   ((>= 2-count 3) (200+ result))
+	   ((>= 3-count 3) (300+ result))
+	   ((>= 4-count 3) (400+ result))
+	   ((>= 5-count 3)
+	    ((3- 5-count) (500+ result)))
+	   ((>= 6-count 3) (600+ result)))
+     (setf result (+ (* 5-count 50) (* 1-count 100)))
+     (return result)
+     ))
+  )
 
 (define-test test-score-of-an-empty-list-is-zero
     (assert-equal 0 (score nil)))
