@@ -109,7 +109,7 @@
       (setf value-and-exists (multiple-value-list (gethash "Obama" prev-pres)))
       (assert-equal value-and-exists '("Bush" t))
       (setf value-and-exists (multiple-value-list (gethash "Lincoln" prev-pres)))
-      (assert-equal value-and-exists '("Buchanan" t)_)
+      (assert-equal value-and-exists '("Buchanan" t))
       (setf value-and-exists (multiple-value-list (gethash "Washington" prev-pres)))
       (assert-equal value-and-exists '(nil t))
       (setf value-and-exists (multiple-value-list (gethash "Franklin" prev-pres)))
