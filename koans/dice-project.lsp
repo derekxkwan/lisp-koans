@@ -32,7 +32,7 @@
 
 (defmethod roll (how-many (object dice-set))
   ;; WRITE ROLL METHOD DEFINITION HERE
-  (setf (slot-value object 'values) (loop for i from 0 below how-many collect (+ (random 6))))
+  (setf (slot-value object 'values) (loop for i from 0 below how-many collect (+ 1 (random 6))))
 )
 
 
